@@ -51,7 +51,7 @@ def jeu_devin_Q2():
         proposition = (nombre_min + nombre_max) // 2
         print ("Proposition {} : {} ".format(nb_coups + 1,proposition))
 
-        #Evaluer la proposition de  la machine
+        #Evaluer la proposition
             #Demander l'évaluation' à l'utlisateur
         evaluation = input ("Trop (g)rand, trop (p)etit ou (t)rouvé ? ")
         evaluation = evaluation.lower()
@@ -80,23 +80,22 @@ def main():
 
     jouer = True
     while (jouer):
-    #Affciher le menu
+        #Affciher le menu
         print("1- L'ordinateur choisit un nombre et vous le devinez")
         print("2- Vous choisissez un nombre et l'ordinateur le devine")
         print("0- Quitter le programme")
 
-    #Demander le choix du mode à l’utilisateur
+        #Demander le choix du mode à l’utilisateur
         choix_mode = input ("Votre choix : ")
         print()
-    #Lancer le mode de jeu  
+        #Lancer le mode de jeu  
         if (choix_mode == "1"):
             jeu_devin_Q1()
         elif (choix_mode == "2"):
             jeu_devin_Q2()
         elif (choix_mode == "0"):
-            print("Au revoir...")
             jouer = False
-
+    print("Au revoir...")
 
 if __name__ == '__main__':
     main()
